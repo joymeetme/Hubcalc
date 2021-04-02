@@ -1,34 +1,89 @@
-*
-{
-	margin: 0;
-	padding: 0;
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    background-color:rgba(85, 116, 255, 0.726);
+    
 }
-body
-{
-	 background-color: #f1f3f4;
-	 font-family:sans-serif;
+#container{
+
+    width:100px;
+    height:550px;
+    margin:20px auto;
 }
-.top-nav-bar
-{
-	height: 57px;
-	top:0;
-	position:static;
-	margin-bottom: 20px;
-	border-bottom:  3px solid green;
-	z-index: 2;
+#calculator{
+    width:320px;
+    height: 520px;
+    background-color: #eaedef;
+    margin: 0 auto;
+    top: 20px;
+    position: relative;
+    border-radius: 5px;
+ box-shadow:  0 4px 8px 0 rgba(0,0,0.2) 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-.menu-bar
-{
-	width: 40%;
-	height: 47px;
-	float: right;
+#result{
+    height:120px;
 }
-.menu-bar ul
-{
-	display: inline-flex;
-	float:right;
-}
-.menu-bar ul li
-{
+#history{
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #000;
 
 }
+#output{
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+
+
+.keyboard{
+    height:400px;
+}
+.operator, .number, .empty{
+
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+    float: left;
+    border-radius: 50%;
+     border-width: 0;
+     font-weight: bold;
+     font-size: 15px;
+}
+.number, .empty{
+    background-color: #eaedef;
+}
+.number, .operator{
+    cursor: pointer;
+}
+.operator:active, .number:active{
+    font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+    outline: 0;
+}
+button:nth-child(4){
+    font-size: 20px;
+    background-color: #20b251c2;
+}
+button:nth-child(8){
+    font-size: 20px;
+    background-color: #205ab2c2;
+}
+button:nth-child(12){
+    font-size: 20px;
+    background-color: #b23d20c2;
+}
+button:nth-child(16){
+    font-size: 20px;
+    background-color: #b0b220c2;
+}
+button:nth-child(20){
+    font-size: 20px;
+    background-color: #8420b2c2;
+}
+
