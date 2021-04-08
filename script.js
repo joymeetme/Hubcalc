@@ -1,24 +1,19 @@
-var number = document.getElementsByClassName("number");
-var operator = document.getElementsByClassName("operator");
-var historyValue=document.getElementById("history-value");
-var outputValue=document.getElementById("output-Value");
 function getHistory() {
-  return historyValue.innerText;
+  return document.getElementById("history-value").innerText;
 }
 function printHistory(num) {
-  return (historyValue.innerText = num);
+  return (document.getElementById("history-value").innerText =num);
 }
 function getOutput() {
-  return outputValue.innerText;
+  return document.getElementById("output-value").innerText;
 }
 function printOutput(num) {
   if (num == "") {
-    outputValue.innerText = num;
+    document.getElementById("output-value").innerText = num;
   } else {
-    outputValue.innerText = getFormattedNumber(num);
+    document.getElementById("output-value").innerText = getFormattedNumber(num);
   }
 }
-
 function getFormattedNumber(num) {
   if (num == "-") {
     return "";
@@ -32,7 +27,7 @@ function getFormattedNumber(num) {
 function reverseNumberFormat(num) {
   return Number(num.replace(/,/g, ""));
 }
-
+var operator = document.getElementsByClassName("operator");
 for (var i = 0; i < operator.length; i++) {
   operator[i].addEventListener("click", function () {
     if (this.id == "delete") {
@@ -73,7 +68,7 @@ for (var i = 0; i < operator.length; i++) {
     }
   });
 }
-
+var number = document.getElementsByClassName("number");
 for (var i = 0; i < number.length; i++) {
   number[i].addEventListener("click", function () {
     var output = reverseNumberFormat(getOutput());
